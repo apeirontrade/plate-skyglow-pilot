@@ -24,6 +24,7 @@ Predictions (with sign) were written into a lab notebook **before** each test wa
 | P3 | Slow trend at one site (Oak Ridge `dnb`, 1968–89) | shallower over time | Single-site decline seen (−0.50 ± 0.06 mag/decade at fixed 36-min exposures), **but not supported** once compared with the dark-site twin `dsb` (−0.36 ± 0.08). Differential −0.13 ± 0.10 (ns) |
 | P4 | Same-sky twin-camera differential (12 shared positions; 31 total) | Oak Ridge loses depth faster | **Not supported**: +0.31 ± 0.11 (opposite sign); all positions +0.06 ± 0.06 (ns) |
 | P5 | 1989 recovery, exploratory | Mt. John recovers more | Mt. John +0.15 ± 0.07, Oak Ridge −0.13 ± 0.07 (lead only) |
+| P8 | Shape of the common 1974–89 decline (pre-registered after a DASCH team reply) | pulse (volcanic) vs drift | **Drift, not pulse**: linear beats an El Chichón term by ΔBIC 72 (`dnb`) and 22 (`dsb`); same slope in ATLAS and APASS; survives plate-position controls (`dnb` −0.38 ± 0.04, `dsb` −0.52 ± 0.05); color term flat. DR7 has no non-Damon camera in this era, so Damon-specific vs pipeline-wide is open |
 | — | Oak Ridge `ac`/`rh`, 1935–52 (same prediction as P3) | shallower over time | **Opposite**: deeper by +0.19 to +0.24 mag/decade, consistent with the emulsion improvements DASCH documents for this era |
 
 Full tables and caveats: [RESULTS.md](RESULTS.md).
