@@ -89,3 +89,27 @@ P5 (exploratory), 1989 minus 1983–88 mean, shared positions: Mt. John +0.15 (�
 ## Interpretation
 
 Limiting magnitude is sensitive to sky brightness: it responds to the moon, and the Cambridge → Oak Ridge step goes the right way. But common-mode effects (emulsion, processing, global atmospheric transparency) are as large as the effect sought. **Any light-pollution reconstruction from these plates needs a differential design** (a contemporaneous dark-site twin) and ideally pixel-level sky background, not limiting magnitude alone.
+
+## P8 — what shape is the 1974–89 decline? (`analysis/p8_shape.py`, 31 positions, fixed exposure: dnb 36 min n=935, dsb 30 min n=1152)
+
+Pre-registered 2026-10-27 after Peter Williams (DASCH DR7) replied that emulsions "generally got better with time," which removes the most natural plate-side explanation. Three candidates, three tests. Thresholds fixed in advance: ΔBIC 6; "same slope" = overlapping 2σ.
+
+**(a) Pulse vs drift.** A volcanic-aerosol pulse (El Chichón, April 1982, 1-yr e-folding) against a linear drift:
+
+| series | linear slope (mag/decade) | ΔBIC pulse − linear | both: slope | both: pulse |
+|---|---|---|---|---|
+| dnb | −0.422 ± 0.048 | +71.7 (linear wins) | −0.419 ± 0.049 | +0.03 ± 0.11 (nil) |
+| dsb | −0.449 ± 0.050 | +22.0 (linear wins) | −0.347 ± 0.055 | +0.29 ± 0.07 (wrong sign for dimming) |
+
+Yearly medians fall steadily on both cameras; there is no 1982–85 dip. **Volcanic pulse rejected.** The drift persists in every model.
+
+**(b) Non-Damon series.** In 1974–89 the dataset contains only Damon cameras (dnb 2416, dsb 1250, dnr 182, dsr 121, dny 35) plus 16 `mc` plates. The Damon-specific vs DR7-wide test is **not feasible** with DR7: nothing else was running. (dsr, 1982–84 only, n=118 at 40 min: −1.03 ± 0.47, same sign.)
+
+**(c) Catalog check.** limMagAtlas on the same plates: dnb −0.391 ± 0.048, dsb −0.438 ± 0.047 mag/decade, versus APASS −0.423 ± 0.048 and −0.457 ± 0.050. ATLAS − APASS drifts by only +0.03 ± 0.01 and +0.02 ± 0.01 per decade. **Not a catalog-specific artifact.** Both catalogs see the same plate photometry, so this does not clear the upstream pipeline.
+
+**(d) Controls and diagnostics.**
+- Plate position: on dnb my sampled positions sit farther from plate center after 1982 (median 5–6 cm → 7.3 cm). Adding centerdist + edgedist: dnb −0.400 ± 0.048, dsb −0.461 ± 0.049. Adding 15° position fixed effects as well: dnb −0.382 ± 0.044, dsb −0.520 ± 0.048. **Drift survives.**
+- Color term (medianColortermApass) vs year: flat on both cameras (slope 0.000 ± 0.005 per decade). No sign of an emulsion or filter change.
+- Scan date (2008–2020) explains nothing: lim ~ exposure year + scan year gives scan −0.006 ± 0.005 (dnb) and −0.011 ± 0.004 (dsb) mag per scan-year, with the exposure-year slope unchanged.
+
+**Interpretation.** The 1974–89 decline is a steady drift, common to both hemispheres, present in both calibration catalogs, with a flat color term, independent of scan epoch and plate position. That leaves (i) Damon plate stock, developing, or exposure practice changing over the decade, or (ii) an epoch-dependent term in the DR7 plate photometry upstream of the catalog match. DR7 has no non-Damon camera in this era to separate them. This is the question for the DASCH list.
