@@ -90,7 +90,9 @@ P5 (exploratory), 1989 minus 1983–88 mean, shared positions: Mt. John +0.15 (�
 
 Limiting magnitude is sensitive to sky brightness: it responds to the moon, and the Cambridge → Oak Ridge step goes the right way. But common-mode effects (emulsion, processing, global atmospheric transparency) are as large as the effect sought. **Any light-pollution reconstruction from these plates needs a differential design** (a contemporaneous dark-site twin) and ideally pixel-level sky background, not limiting magnitude alone.
 
-## P8 — what shape is the 1974–89 decline? (`analysis/p8_shape.py`, 31 positions, fixed exposure: dnb 36 min n=935, dsb 30 min n=1152)
+## P8 — what shape is the 1974–89 decline? (`analysis/p8_shape.py`, all 31 positions, fixed exposure: dnb 36 min n=935 over 1976–89, dsb 30 min n=1152 over 1981–89 plus 11 plates in 1979)
+
+Note on sample: the P3 table used the original 15 positions (dnb n=561, dsb n=468); P8 uses all 31. With the larger sample and position fixed effects the Oak Ridge slope comes out slightly shallower than Mt John's, which is the same direction as the P4 differential (+0.31 ± 0.11 on shared positions). The two tables are consistent; neither shows an Oak Ridge excess.
 
 Pre-registered 2026-10-27 after Peter Williams (DASCH DR7) replied that emulsions "generally got better with time," which removes the most natural plate-side explanation. Three candidates, three tests. Thresholds fixed in advance: ΔBIC 6; "same slope" = overlapping 2σ.
 
