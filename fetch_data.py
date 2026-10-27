@@ -1,11 +1,12 @@
 """Reproduce the data pulls used in this pilot from the public DASCH DR7 Starglass API (no key needed).
 Writes data/q_<ra>_<dec>.raw and data/plate_locations_transition.json. Uses curl (the API rejects Python's default client).
-Please be gentle with the API: this makes 15 position queries + ~670 plate lookups with pauses."""
+Please be gentle with the API: this makes 31 position queries + ~670 plate lookups with pauses."""
 import json,os,subprocess,sys,time
 sys.path.insert(0,os.path.join(os.path.dirname(os.path.abspath(__file__)),'analysis'))
 from common import load, filt, DATA
 API='https://api.starglass.cfa.harvard.edu/public'
-POS=[(ra,40) for ra in (60,105,150,195,240,285,330)]+[(150,20),(150,60)]+[(ra,-40) for ra in (0,60,120,180,240,300)]
+POS=[(ra,40) for ra in (60,105,150,195,240,285,330)]+[(150,20),(150,60)]+[(ra,-40) for ra in (0,60,120,180,240,300)]\
+    +[(ra,dec) for dec in (0,-15) for ra in (0,45,90,135,180,225,270,315)]
 os.makedirs(DATA,exist_ok=True)
 def curl(args): 
     p=subprocess.run(['curl','-s','-f','--max-time','60']+args,capture_output=True,text=True); return p.stdout if p.returncode==0 else None

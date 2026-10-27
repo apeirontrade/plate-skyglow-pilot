@@ -1,6 +1,6 @@
 # Results (pilot, 2026-10-27)
 
-Data: DASCH DR7 via the public Starglass API, `POST /dasch/dr7/queryexps`, at 15 positions: the dec +40 ring at RA 60, 105, 150, 195, 240, 285 and 330; (150, +20); (150, +60); and the dec −40 ring at RA 0, 60, 120, 180, 240 and 300.
+Data: DASCH DR7 via the public Starglass API, `POST /dasch/dr7/queryexps`, at 31 positions: the dec +40 ring at RA 60, 105, 150, 195, 240, 285 and 330; (150, +20); (150, +60); the dec −40 ring at RA 0, 60, 120, 180, 240 and 300; and the dec 0 and dec −15 rings at RA 0–315 in steps of 45 (added for P4).
 
 Filters: requires `limMagApass`, `exptime` > 0 and a parseable date; `edgedist` ≥ 2.0 cm; `wcssource == imwcs`. Exposures are deduplicated by (series, platenum, expnum), keeping the row with the largest edge distance.
 
@@ -72,6 +72,19 @@ The first number in each cell is the median limiting magnitude; n is the number 
 | dsb (Mt. John) | 15.16, n=34, exp 120 | 15.09, n=40, exp 120 | — | 15.06, n=47, exp 60 | 14.99, n=66, exp 30 | 14.73, n=187, exp 30 | 14.51, n=192, exp 30 | 14.91, n=29, exp 30 |
 
 **Lead, not a result:** in 1989 the Mt. John series rebounds (14.51 → 14.91) while Oak Ridge keeps falling (14.37 → 14.27). That is the pattern recovery from the 1982 El Chichón aerosols plus a residual Oak Ridge decline would leave. The samples are too small to test it here.
+
+## P4/P5 — same-sky twin-camera differential (`analysis/p4_twin.py`, 31 positions)
+
+Pre-registered before running. Model: lim ~ site + year + site×year + moon + log10(exptime) + position fixed effects, 1974–89.
+
+| sample | n (dnb / dsb) | Mt. John trend (mag/dec) | **Oak Ridge − Mt. John trend** | 95% |
+|---|---|---|---|---|
+| 12 positions imaged by both cameras | 1068 / 402 | −0.51 ± 0.10 | **+0.31 ± 0.11** (t=2.8, opposite to prediction) | [+0.09, +0.52] |
+| all 31 positions | 2416 / 1250 | −0.35 ± 0.05 | +0.06 ± 0.06 (ns) | [−0.06, +0.17] |
+
+The Oak Ridge plates are ~1 mag shallower than Mt. John on the same stars, but that offset is confounded by exposure time, airmass (Oak Ridge sees dec −15° low in the sky) and extinction. Don't read it as skyglow.
+
+P5 (exploratory), 1989 minus 1983–88 mean, shared positions: Mt. John +0.15 (≈0.07, n=24), Oak Ridge −0.13 (≈0.07, n=37).
 
 ## Interpretation
 
