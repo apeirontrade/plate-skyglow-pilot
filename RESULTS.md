@@ -71,7 +71,7 @@ The first number in each cell is the median limiting magnitude; n is the number 
 | dnb (Oak Ridge) | 14.73, n=3, exp 125 | 14.21, n=6, exp 121 | 14.84, n=128, exp 36 | 14.69, n=196, exp 36 | 14.71, n=227, exp 36 | 14.59, n=423, exp 36 | 14.37, n=397, exp 36 | 14.27, n=57, exp 36 |
 | dsb (Mt. John) | 15.16, n=34, exp 120 | 15.09, n=40, exp 120 | — | 15.06, n=47, exp 60 | 14.99, n=66, exp 30 | 14.73, n=187, exp 30 | 14.51, n=192, exp 30 | 14.91, n=29, exp 30 |
 
-**Lead, not a result:** in 1989 the Mt. John series rebounds (14.51 → 14.91) while Oak Ridge keeps falling (14.37 → 14.27). That is the pattern recovery from the 1982 El Chichón aerosols plus a residual Oak Ridge decline would leave. The samples are too small to test it here.
+**Lead, not a result:** in 1989 the Mt. John series rebounds (14.51 → 14.91) while Oak Ridge keeps falling (14.37 → 14.27). That could be a southern recovery from the 1982 El Chichón aerosols, or an end-of-program artifact at Oak Ridge (P4 finds no Oak Ridge-specific decline). The samples are too small to test it here.
 
 ## P4/P5 — same-sky twin-camera differential (`analysis/p4_twin.py`, 31 positions)
 

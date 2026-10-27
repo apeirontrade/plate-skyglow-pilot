@@ -50,7 +50,7 @@ Raw API responses are not redistributed here; `fetch_data.py` regenerates them. 
 ## Worth checking next
 
 - **Differential twin-camera design** (Damon north `dn*` vs. south `ds*`) across many more positions.
-- **The Mt. John series rebounds in 1989** while Oak Ridge keeps falling. On shared sky, the 1989 minus 1983–88 change is +0.15 ± 0.07 at Mt. John and −0.13 ± 0.07 at Oak Ridge. That is the shape that recovery from the 1982 El Chichón volcanic aerosols plus a local Oak Ridge decline would leave. The sample is far too small to claim anything; it's flagged as a lead, not a result.
+- **The Mt. John series rebounds in 1989** while Oak Ridge keeps falling. On shared sky, the 1989 minus 1983–88 change is +0.15 ± 0.07 at Mt. John and −0.13 ± 0.07 at Oak Ridge. That could be a southern recovery from the 1982 El Chichón aerosols, or an end-of-program artifact at Oak Ridge. The samples are small; it’s flagged as a lead, not a result.
 - **Pixel-level sky background** from DASCH mosaics, measured relative to catalogued stars on the same plate.
 
 ## Related work
